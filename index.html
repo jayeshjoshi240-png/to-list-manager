@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cosmic Task Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="ambient-bg">
+        <div class="orb orb-1"></div>
+        <div class="orb orb-2"></div>
+    </div>
+
+    <div class="todo-container">
+        <div class="header">
+            <h1>Mission Control</h1>
+            <button id="theme-toggle" class="icon-btn" aria-label="Toggle theme">☀️</button>
+        </div>
+
+        <div class="dashboard">
+            <div class="stat-card">
+                <span class="stat-label">Total</span>
+                <span id="stat-total" class="stat-value">0</span>
+            </div>
+            <div class="stat-card">
+                <span class="stat-label">Done</span>
+                <span id="stat-completed" class="stat-value">0</span>
+            </div>
+            <div class="stat-card">
+                <span class="stat-label">Pending</span>
+                <span id="stat-pending" class="stat-value">0</span>
+            </div>
+        </div>
+
+        <div class="progress-container">
+            <div id="progress-bar" class="progress-bar"></div>
+        </div>
+
+        <form id="todo-form">
+            <input type="text" id="todo-input" placeholder="Initialize new sequence..." required autocomplete="off">
+            
+            <select id="todo-category" class="glass-select">
+                <option value="general">General</option>
+                <option value="core">Core System</option>
+                <option value="frontend">UI / UX</option>
+                <option value="backend">Database</option>
+            </select>
+
+            <button type="submit" class="add-btn">Add</button>
+        </form>
+
+        <ul id="todo-list"></ul>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
